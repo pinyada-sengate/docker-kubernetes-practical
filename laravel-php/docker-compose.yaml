@@ -10,7 +10,7 @@ services:
 
   php:
     build:
-      context: ./dockerfile
+      context: ./dockerfiles
       dockerfile: php.dockerfile
     volumes:
       - ./src:/var/www/html:delegated
@@ -19,3 +19,10 @@ services:
     image: mysql:5.7
     env_file:
       - ./env/mysql.env
+
+  composer:
+    build:
+      context: ./dockerfiles
+      dockerfile: composer.dockerfile
+    volumes:
+      - ./src:/var/www/html
