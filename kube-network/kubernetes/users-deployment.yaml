@@ -18,4 +18,4 @@ spec:
           image: pinyadapizza/kub-demo-users:latest
           env:
             - name: AUTH_ADDRESS
-              value: localhost
+              value: "10.105.32.100"
